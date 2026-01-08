@@ -1,6 +1,15 @@
 
 version: 2
 
+sources:
+  - name: jaffle
+    database: project-2132b8fa-c447-44ea-a20
+    schema: Amazon
+    tables:
+      - name: raw_customers
+
+
+
 models:
   - name: my_first_dbt_model
     description: "A starter dbt model"
