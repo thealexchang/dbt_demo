@@ -29,3 +29,17 @@ models:
         data_tests:
           - unique
           - not_null
+
+
+  - name: customers
+    columns:
+      - name: id
+        tests:
+          - unique
+          - not_null
+          - relationships:
+              to: ref('orders')
+              field: customer
+      - name: name
+        tests:
+          - not_null
