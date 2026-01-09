@@ -1,3 +1,6 @@
-select name
+{{ config (
+    materialized='table'
+)}}
+
+select *
 from {{ source('jaffle','raw_customers')}}
-where name like '%lee%'
